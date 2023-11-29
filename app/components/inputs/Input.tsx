@@ -6,6 +6,7 @@ import {
   UseFormRegister 
 } from "react-hook-form";
 import { BiDollar } from "react-icons/bi";
+import { FaRupeeSign } from 'react-icons/fa';
 
 interface InputProps {
   id: string;
@@ -31,15 +32,17 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className="w-full relative">
       {formatPrice && (
-        <BiDollar
-          size={24}  
-          className="
-            text-neutral-700
-            absolute
-            top-5
-            left-2
-          "
-        />
+        <span
+        className="
+          text-neutral-700
+          absolute
+          top-5
+          left-2
+        "
+      >
+        ₹
+      </span>
+      
       )}
       <input
         id={id}
@@ -89,4 +92,4 @@ const Input: React.FC<InputProps> = ({
    );
 }
  
-export default Input;
+export default Input;
